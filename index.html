@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Aleksandar Đ. | Frontend</title>
+  </head>
+  <body>
+    <!------------------------ NAV BAR SECTION--------------------------->
+    <nav class="nav">
+      <a href="#" class="logo">A<span class="logo__span">Đ.</span></a>
+
+      <ul class="navigation">
+        <li>
+          <a class="nav__el nav__el--home active" href="#home"
+            ><i class="bx bx-home"></i
+          ></a>
+        </li>
+        <li>
+          <a class="nav__el nav__el--about" href="#about"
+            ><i class="bx bx-user"></i
+          ></a>
+        </li>
+        <li>
+          <a class="nav__el nav__el--skills" href="#skills"
+            ><i class="bx bx-code-block"></i
+          ></a>
+        </li>
+        <li>
+          <a class="nav__el nav__el--portfolio" href="#portfolio"
+            ><i class="bx bx-briefcase-alt"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav__el nav__el--contact" href="#contact"
+            ><i class="bx bx-message-dots"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="bx bx-menu" id="menu__icon"></div>
+    </nav>
+
+    <!------------------------ HEADING - HOME - SECTION--------------------------->
+    <header class="home section" id="home">
+      <div class="home__socials">
+        <div class="social__after"></div>
+        <a
+          class="home__social"
+          target="_blank"
+          href="https://www.linkedin.com/in/djuraleksandar/"
+          ><i class="btn bx bxl-linkedin"></i
+        ></a>
+        <a
+          class="home__social"
+          target="_blank"
+          href="https://www.instagram.com/nekultivisan/"
+          ><i class="btn bx bxl-instagram-alt"></i
+        ></a>
+        <a
+          class="home__social"
+          target="_blank"
+          href="https://www.facebook.com/nekultivisan"
+          ><i class="btn bx bxl-facebook"></i
+        ></a>
+      </div>
+      <div class="home__text">
+        <div class="slide">
+          <span class="two">Hello world</span>
+        </div>
+        <h1 class="home__title">Aleksandar</h1>
+        <h3 class="home__title2">Frontend <span>Developer.</span></h3>
+        <p class="p__animate"></p>
+        <div class="buttons">
+          <a class="btn" href="#contact">Let's talk</a>
+          <a class="btn btn--secondary" href="#portoflio">Portfolio</a>
+        </div>
+      </div>
+    </header>
+
+    <!------------------------ ABOUT SECTION--------------------------->
+    <section class="about section hidden" id="about">
+      <div class="about__img">
+        <img src="../img/me3.png" loading="lazy" alt="Aleksandar Đurović" />
+      </div>
+      <div class="about__text">
+        <h2>About <span>Me</span></h2>
+        <h4>Who am I?</h4>
+        <div class="p__box">
+          <p>
+            I'm Aleksandar Đurović, 29, a Frontend Developer. After spending a
+            few years working in the service industry, I realized that my unique
+            personality traits and skills would be a better fit for IT industry.
+          </p>
+          <p>
+            Projects that pose a challenge and require growth are my favorite;
+            There is no such thing as impossible. I am a tolerant, hardworking,
+            and persistent person.
+          </p>
+          <p>
+            I spend my free time doing yoga, meditating, or making cocktails. A
+            lover of kayaking and the outdoors—I am also a big fan of
+            philosophy.
+          </p>
+          <p>
+            I always strive to bring my knowledge from other domains into my
+            work. Finally, I'm open to opportunities for freelance or full-time
+            employment. If you are interested in working with me, don't hesitate
+            to contact me!
+          </p>
+        </div>
+        <div style="text-align: center; margin-bottom: 1.5rem">
+          <a href="#contact" class="btn">Let's talk</a>
+          <a
+            href="../AlexandarDjurovicRESUME.pdf"
+            class="btn btn--secondary"
+            download
+            >Download CV</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!------------------------ SKILL SECTION--------------------------->
+    <section class="skills section hidden" id="skills">
+      <div class="skills__text-main">
+        <p>What I am Expert In</p>
+        <h2><span>My</span> Skills</h2>
+      </div>
+
+      <div class="skills__content">
+        <div class="content__box">
+          <div class="skill__img">
+            <img
+              class="content__icon"
+              src="../img/skills/javascript.svg"
+              alt="javascript"
+            />
+          </div>
+          <h6 class="h6">1+ year experience</h6>
+          <p><span class="skill__counter" data-target="8">8</span>+ projects</p>
+        </div>
+        <div class="content__box">
+          <div class="skill__img">
+            <img
+              class="content__icon"
+              src="../img/skills/css3.svg"
+              alt="css3"
+            />
+          </div>
+          <h6>1+ year experience</h6>
+          <p><span class="skill__counter" data-target="8">8</span>+ projects</p>
+        </div>
+        <div class="content__box">
+          <div class="skill__img">
+            <img
+              class="content__icon"
+              src="../img/skills/html5.svg"
+              alt="html5"
+            />
+          </div>
+          <h6>1+ year experience</h6>
+          <p><span class="skill__counter" data-target="8">8</span>+ projects</p>
+        </div>
+        <div class="content__box">
+          <div class="skill__img">
+            <img
+              class="content__icon"
+              src="../img/skills/react.svg"
+              alt="react"
+            />
+          </div>
+          <h6>&lt;6 months</h6>
+          <p>progress</p>
+        </div>
+        <div class="content__box">
+          <div class="skill__img">
+            <img
+              class="content__icon"
+              src="../img/skills/sass.svg"
+              alt="sass"
+            />
+          </div>
+          <h6>&lt;6 months</h6>
+          <p><span class="skill__counter" data-target="2">2</span> projects</p>
+        </div>
+        <div class="content__box">
+          <div class="skill__img">
+            <img class="content__icon" src="../img/skills/npm.svg" alt="npm" />
+          </div>
+          <h6>&lt;6 months</h6>
+          <p><span class="skill__counter" data-target="2">2</span> projects</p>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------ PORTFOLIO SECTION--------------------------->
+    <section class="portfolio section hidden" id="portfolio">
+      <div class="skills__text-main">
+        <p>Portoflio</p>
+        <h2><span>Latest</span> Project</h2>
+      </div>
+
+      <div class="portfolio__content">
+        <div class="row">
+          <img
+            loading="lazy"
+            src="../img/portfolio7.jpg"
+            alt="Forkify application"
+          />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Culinary application - Forkify</h5>
+              <p>
+                Forkify is a JavaScript application that interacts with the
+                Forkify API to fetch and display recipe food data.
+              </p>
+              <p>
+                The user can search for a specific recipe, and save to a
+                favorites list via local storage.
+              </p>
+            </div>
+            <div class="layer__btns">
+              <a
+                href="https://forkify-food-aleksandar.netlify.app/"
+                target="_blank"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                href="https://github.com/DjurovicAleksandar/Forkify_food_app"
+                target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img
+            loading="lazy"
+            src="../img/portfolio1.jpg"
+            alt="Guess my number"
+          />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Broswer game - Guess my number</h5>
+              <p>Made with JavaScript, CSS and HTML.</p>
+              <p>
+                The goal of this game is to guess a secret number (between
+                1-20).
+              </p>
+            </div>
+            <div class="layer__btns">
+              <a target="_blank" href="https://guessmynumber-alex.netlify.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/GuessMyNumber"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img loading="lazy" src="../img/portfolio2.jpg" alt="Pig game" />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Broswer game - Pig game</h5>
+              <p>Made with JavaScript, CSS and HTML.</p>
+              <p>
+                This application is an online version of "The Game of Pig".
+                Allows 2 players.
+              </p>
+            </div>
+            <div class="layer__btns">
+              <a target="_blank" href="https://firstto100win.netlify.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/PigGame"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img loading="lazy" src="../img/portfolio3.jpg" alt="Bankist" />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Landing page - Bankist</h5>
+              <p>Made with JavaScript, HTML and CSS.</p>
+              <p>
+                Bankist is a fictional online bank. It is a project introduced
+                by Jonas Schmedtmann in order to practice DOM manipulation and
+                user interaction.
+              </p>
+            </div>
+            <div class="layer__btns">
+              <a
+                target="_blank"
+                href="https://bankistapp-maingpage.netlify.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/BANKISTAPP-MainPage"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img
+            loading="lazy"
+            src="../img/portfolio4.jpg"
+            alt="Bankint login menu"
+          />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Single page website- Bankist login menu</h5>
+              <p>Made with JavaScript, CSS and HTML.</p>
+              <p>
+                Bankist has an option to log in to the account and use different
+                functionalities, almost like in an actual bank! You can make
+                your own account and try it out.
+              </p>
+            </div>
+            <div class="layer__btns">
+              <a
+                target="_blank"
+                href="https://bankistapacc-aleksandar.netlify.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/BANKISTAPP-Create_and_LogIn"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img loading="lazy" src="../img/portfolio5.jpg" alt="Mapty project" />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Web application - MaptyProject</h5>
+              <p>
+                Made with JavaScript, CSS, HTML, Leafleft libary and Geo
+                Location API.
+              </p>
+              <p>
+                A simple website that stores the data of your workouts and
+                update it in geolocational website.
+              </p>
+            </div>
+            <div class="layer__btns">
+              <a target="_blank" href="https://mapyourexercise.netlify.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/MaptyProject"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img loading="lazy" src="../img/portfolio6.jpg" alt="Color flip" />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>One page - Color flip</h5>
+              <p>Made with JavaScript,HTML, CSS.</p>
+              <p>
+                Solo project. On click color changes. If you hover over it's
+                name, a hex of color will be shown instead.
+              </p>
+            </div>
+            <div class="layer__btns">
+              <a
+                target="_blank"
+                href="https://randomcsscolorgenerator.netlify.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/ColorFlip"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------ CONTACT SECTION--------------------------->
+    <section class="contact section hidden" id="contact">
+      <div class="contact__text">
+        <h2>Contact <span>Me!</span></h2>
+        <h4>If You Have Any Project In Your Mind.</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.947997332363!2d18.781582815336538!3d43.50342037912676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47588134160db751%3A0x905dcf06c3db808a!2zQ2FyYSBEdcWhYW5hLCBGb8SNYQ!5e0!3m2!1sen!2sba!4v1671636368248!5m2!1sen!2sba"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <div class="contact__socials">
+          <a target="_blank" href="https://www.linkedin.com/in/djuraleksandar/"
+            ><i class="btn bx bxl-linkedin"></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/nekultivisan/"
+            ><i class="btn bx bxl-instagram-alt"></i
+          ></a>
+          <a target="_blank" href="https://www.facebook.com/nekultivisan"
+            ><i class="btn bx bxl-facebook"></i
+          ></a>
+        </div>
+      </div>
+      <div class="contact__form">
+        <form
+          action="https://formsubmit.co/djur.aleksandar@gmail.com"
+          method="POST"
+        >
+          <input name="name" type="text" placeholder="Your name" required />
+          <input name="email" type="email" placeholder="Your E:mail" required />
+          <input name="number" type="number" placeholder="Your phone number" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <textarea
+            name="Message"
+            cols="35"
+            rows="10"
+            placeholder="How can I help you?"
+            required
+          ></textarea>
+          <input type="submit" class="submit btn" value="Send message" />
+          <a style="margin-left: 4rem" class="btn" href="tel:0038765345241"
+            >Call me</a
+          >
+        </form>
+      </div>
+    </section>
+    <!------------------------ FOOTER SECTION--------------------------->
+    <footer>
+      <div class="footer__text">
+        <p>Copyright © 2022 by Aleksandar Đurović All Rights Reserved.</p>
+        <p>
+          Website icons by
+          <a target="_blank" href="https://icons8.com/">Icon8</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
