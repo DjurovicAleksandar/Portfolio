@@ -130,25 +130,13 @@ nav i:hover {
 }
 
 .slide {
-  margin-bottom: 2rem;
+  margin: 0rem 0 0.1rem -0.2rem;
 }
 /**********************HEADING TEXT BOX STYLING***********************/
-.one {
-  display: inline-block;
-  margin-right: 1.5rem;
-  height: 3.2rem;
-  padding: 0 1.5rem;
-  line-height: 3.2rem;
-  font-size: 2rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  background-color: var(--main-color);
-  color: var(--text-color);
-}
 .two {
   display: inline-block;
   color: var(--second-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--bg-color);
 }
@@ -161,7 +149,6 @@ nav i:hover {
   /* letter-spacing: 1.1rem; */
 }
 .home__text h3 {
-  /* color: var(--text-color); */
   margin: 0 0 3.5rem;
   font-size: 4.8rem;
   font-weight: 700;
@@ -225,7 +212,7 @@ nav i:hover {
   display: inline-block;
   padding: 1.2rem 2.8rem;
   background: var(--main-color);
-  border: 0.1rem solid transparent;
+  /* border: 0.1rem solid transparent; */
   border-radius: 0.5rem;
   color: var(--text-color);
   font-size: 1.6rem;
@@ -234,6 +221,20 @@ nav i:hover {
   transition: var(--transition);
 
   white-space: nowrap;
+}
+.main__btn {
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    var(--text-color) 50%
+  );
+  background-size: 230%;
+  border: 0.1rem solid var(--main-color);
+}
+.main__btn:hover {
+  background-position: 100%;
+  color: var(--text-color);
 }
 
 .btn:hover {
@@ -311,6 +312,7 @@ nav i:hover {
 .about .btn--secondary:hover {
   color: var(--main-color);
 }
+*/
 
 /**********************************SKILLS SECTION STYLING*********************************************/
 
@@ -581,15 +583,12 @@ form textarea {
 .contact__form .submit {
   display: inline-block;
   font-size: 1.6rem;
-  background-color: var(--main-color);
-  color: var(--text-color);
   width: fit-content;
-
+  background-color: var(--main-color);
   transition: var(--transition);
 }
 .contact__form .submit:hover {
   cursor: pointer;
-  background: var(--text-color);
   color: var(--main-color);
 }
 
@@ -629,13 +628,6 @@ nav.sticky .navigation a {
 }
 
 /*******************************MEDIA QUERIES********************************************************/
-/* @media (min-width: 920px) {
-  .p__box {
-    font-size: 1.7rem;
-    line-height: 1.5;
-  }
-} */
-
 @media (max-width: 1480px) {
   nav {
     padding: 1.2rem 2.5%;
