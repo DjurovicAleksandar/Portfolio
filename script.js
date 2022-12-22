@@ -14,7 +14,7 @@ const el = document.querySelector('.p__animate');
 
 const writerObj = {
   loop: true,
-  delay: 50,
+  delay: 40,
 };
 
 //TYPEWRITER////////////////////////////////////////////////////////////////////////////
@@ -34,9 +34,15 @@ const allSections = document.querySelectorAll('.section');
 const items = document.querySelectorAll('.nav__el');
 const counters = document.querySelectorAll('.skill__counter');
 
+// window.addEventListener('load', e => {
+//   window.history.pushState(null, '_', '#home');
+
+// });
+
 const obsCallBack = (entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
+    console.log(location.hash.slice(1));
 
     //////////////////////////////////////////// ADDING ACTIVE CLASS TO NAV ITEMS/////////////////////////////////////
     //Removing from NAV ITEMS ACTIVE STATUS
@@ -103,9 +109,9 @@ const contentBox = document.querySelectorAll('.content__box');
 contentBox.forEach(box => {
   box.addEventListener('mouseenter', e => {
     const image = e.target.querySelector('.content__icon');
-    image.src = `../img/skills/${image.alt}-color.svg`;
+    image.src = `./img/skills/${image.alt}-color.svg`;
     box.addEventListener('mouseleave', e => {
-      image.src = `../img/skills/${image.alt}.svg`;
+      image.src = `./img/skills/${image.alt}.svg`;
     });
   });
 });

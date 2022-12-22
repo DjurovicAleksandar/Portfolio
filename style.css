@@ -119,7 +119,7 @@ nav i:hover {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url(../img/background1.jpg);
+  background-image: url(./img/background1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--bg-color);
@@ -725,5 +725,9 @@ nav.sticky .navigation a {
 
   .home__socials {
     display: none;
+  }
+
+  .layer p {
+    font-size: 0.9rem;
   }
 }
