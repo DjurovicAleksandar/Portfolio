@@ -34,20 +34,17 @@ const allSections = document.querySelectorAll('.section');
 const items = document.querySelectorAll('.nav__el');
 const counters = document.querySelectorAll('.skill__counter');
 
-// window.addEventListener('load', e => {
-//   window.history.pushState(null, '_', '#home');
-
-// });
-
 const obsCallBack = (entries, observer) => {
   entries.forEach(entry => {
+    const lastEntry = entry.target.id;
     if (!entry.isIntersecting) return;
-    console.log(location.hash.slice(1));
 
     //////////////////////////////////////////// ADDING ACTIVE CLASS TO NAV ITEMS/////////////////////////////////////
     //Removing from NAV ITEMS ACTIVE STATUS
     items.forEach(item => item.classList.remove('active'));
 
+    console.log(lastEntry);
+    console.log(entry.target.id);
     //ADDING TO NAV ITEMS ACTIVE STATUS
     document
       .querySelector(`.nav__el--${entry.target.id}`)
@@ -139,3 +136,44 @@ homeSocials.forEach(btn => {
     btn.addEventListener(event, () => line.classList.toggle('position'));
   });
 });
+
+//CAROUSEL MOVING// IN SKILL SECTION//
+
+const carouselMovement = () => {
+  const carousel = document.querySelector('.skills__carousel');
+  const list = document.querySelector('.skills__list');
+  let secondList;
+
+  const speed = 1;
+  const width = list.offsetWidth;
+
+  let decrement = 0;
+  let secondDecrement = width;
+
+  function clone() {
+    secondList = list.cloneNode(true);
+    carousel.appendChild(secondList);
+    secondList.style.left = `${width}px`;
+  }
+
+  function firstListMovement() {
+    decrement -= speed;
+
+    if (width >= Math.abs(decrement)) list.style.left = `${decrement}px`;
+    else decrement = width;
+  }
+
+  function secondListMovement() {
+    secondDecrement -= speed;
+    if (secondList.offsetWidth >= Math.abs(secondDecrement))
+      secondList.style.left = `${secondDecrement}px`;
+    else secondDecrement = width;
+  }
+
+  clone();
+
+  let aMove = setInterval(firstListMovement, 20);
+  let bMove = setInterval(secondListMovement, 20);
+};
+
+carouselMovement();
