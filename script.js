@@ -1,16 +1,23 @@
+//Gsap library
+const timeline = gsap.timeline({ defaults: { duration: 0.5, opacity: 0 } });
+//Typewriter library
+const el = document.querySelector('.p__animate');
+//Obeserver API variables
+const nav = document.querySelector('nav');
+const navHeight = nav.getBoundingClientRect().height;
+const allSections = document.querySelectorAll('.section');
+const items = document.querySelectorAll('.nav__el');
+const counters = document.querySelectorAll('.skill__counter');
+
 //GSAP////////////////////////////////////////////////////////////////////////////
 
-const timeline = gsap.timeline({ defaults: { duration: 0.5 } });
-
 timeline
-  .from('.two', { y: '-400px', opacity: 0 })
-  .from('.home__title', { x: '400px', opacity: 0 }, '<0.3')
-  .from('.home__title2', { opacity: 0, x: '-400px' }, '<0')
-  .from('.home__socials', { x: '400px', opacity: 0 }, '<0')
-  .from('.home__social', { stagger: 0.5, duration: 0.4, opacity: 0 })
-  .from('.buttons', { x: '400px', opacity: '0' });
-
-const el = document.querySelector('.p__animate');
+  .from('.two', { y: '-400px' })
+  .from('.home__title', { x: '400px' }, '<0.3')
+  .from('.home__title2', { x: '-400px' }, '<0')
+  .from('.home__socials', { x: '400px' }, '<0')
+  .from('.home__social', { stagger: 0.5, duration: 0.4 })
+  .from('.buttons', { x: '400px' });
 
 const writerObj = {
   loop: true,
@@ -26,20 +33,14 @@ typewriter
   .pauseFor(200)
   .start();
 
-////////////////////////////////////////////////////////////////////////////INTERSECTION OBSERVER////////////////////////////////////////////////////////////////////////////
-const nav = document.querySelector('nav');
-const navHeight = nav.getBoundingClientRect().height;
-
-const allSections = document.querySelectorAll('.section');
-const items = document.querySelectorAll('.nav__el');
-const counters = document.querySelectorAll('.skill__counter');
+//INTERSECTION OBSERVER/////////////////////////////////////////////////////////////////
 
 const obsCallBack = (entries, observer) => {
   entries.forEach(entry => {
     const lastEntry = entry.target.id;
     if (!entry.isIntersecting) return;
 
-    //////////////////////////////////////////// ADDING ACTIVE CLASS TO NAV ITEMS/////////////////////////////////////
+    /////// ADDING ACTIVE CLASS TO NAV ITEMS//////////////////////////////////////////////
     //Removing from NAV ITEMS ACTIVE STATUS
     items.forEach(item => item.classList.remove('active'));
 
@@ -50,10 +51,10 @@ const obsCallBack = (entries, observer) => {
       .querySelector(`.nav__el--${entry.target.id}`)
       .classList.add('active');
 
-    ////////////////////////////////////////////// Changing HASH in adress bard /////////////////////////////////////
+    ////////////////////////////////////////////// Changing HASH in adress bard //////////
     window.history.pushState(null, '_', `#${entry.target.id}`);
 
-    ////////////////////////////////////////////// SECTION LOAD && skill num count /////////////////////////////////////
+    //////////////AUTOMATIC JS COUNTER IN SKILL SECTION////////////////
     if (entry.target.id === 'skills') {
       counters.forEach(counter => {
         counter.innerText = '0';
@@ -69,6 +70,7 @@ const obsCallBack = (entries, observer) => {
         updateCounter();
       });
     }
+    ////////////////////////////////////////////// SECTION LOAD ////////////
     entry.target.classList.remove('hidden');
   });
 };
@@ -139,41 +141,41 @@ homeSocials.forEach(btn => {
 
 //CAROUSEL MOVING// IN SKILL SECTION//
 
-const carouselMovement = () => {
-  const carousel = document.querySelector('.skills__carousel');
-  const list = document.querySelector('.skills__list');
-  let secondList;
+// const carouselMovement = () => {
+//   const carousel = document.querySelector('.skills__carousel');
+//   const list = document.querySelector('.skills__list');
+//   let secondList;
 
-  const speed = 1;
-  const width = list.offsetWidth;
+//   const speed = 1;
+//   const width = list.offsetWidth;
 
-  let decrement = 0;
-  let secondDecrement = width;
+//   let decrement = 0;
+//   let secondDecrement = width;
 
-  function clone() {
-    secondList = list.cloneNode(true);
-    carousel.appendChild(secondList);
-    secondList.style.left = `${width}px`;
-  }
+//   function clone() {
+//     secondList = list.cloneNode(true);
+//     carousel.appendChild(secondList);
+//     secondList.style.left = `${width}px`;
+//   }
 
-  function firstListMovement() {
-    decrement -= speed;
+//   function firstListMovement() {
+//     decrement -= speed;
 
-    if (width >= Math.abs(decrement)) list.style.left = `${decrement}px`;
-    else decrement = width;
-  }
+//     if (width >= Math.abs(decrement)) list.style.left = `${decrement}px`;
+//     else decrement = width;
+//   }
 
-  function secondListMovement() {
-    secondDecrement -= speed;
-    if (secondList.offsetWidth >= Math.abs(secondDecrement))
-      secondList.style.left = `${secondDecrement}px`;
-    else secondDecrement = width;
-  }
+//   function secondListMovement() {
+//     secondDecrement -= speed;
+//     if (secondList.offsetWidth >= Math.abs(secondDecrement))
+//       secondList.style.left = `${secondDecrement}px`;
+//     else secondDecrement = width;
+//   }
 
-  clone();
+//   clone();
 
-  let aMove = setInterval(firstListMovement, 20);
-  let bMove = setInterval(secondListMovement, 20);
-};
+//   let aMove = setInterval(firstListMovement, 20);
+//   let bMove = setInterval(secondListMovement, 20);
+// };
 
-carouselMovement();
+// carouselMovement();

@@ -383,7 +383,7 @@ nav i:hover {
 }
 
 /**********************************CAROUSEL*********************************************/
-.skills__carousel {
+/* .skills__carousel {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
@@ -401,7 +401,7 @@ nav i:hover {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-}
+} */
 
 /**********************************PORTOFLIO SECTION STYLING*********************************************/
 .portfolio__content {
