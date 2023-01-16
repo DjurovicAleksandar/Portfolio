@@ -7,33 +7,19 @@ const nav = document.querySelector('nav');
 const navHeight = nav.getBoundingClientRect().height;
 const allSections = document.querySelectorAll('.section');
 const items = document.querySelectorAll('.nav__el');
+//
 const counters = document.querySelectorAll('.skill__counter');
+const contentBox = document.querySelectorAll('.content__box');
+//
+const menutBtn = document.getElementById('menu__icon');
+const navigationList = document.querySelector('.navigation');
+//
+const homeSocials = document.querySelectorAll('.home__social');
+const line = document.querySelector('.social__after');
 
-//GSAP////////////////////////////////////////////////////////////////////////////
+/////////////// Observer functions //////////////////
 
-timeline
-  .from('.two', { y: '-400px' })
-  .from('.home__title', { x: '400px' }, '<0.3')
-  .from('.home__title2', { x: '-400px' }, '<0')
-  .from('.home__socials', { x: '400px' }, '<0')
-  .from('.home__social', { stagger: 0.5, duration: 0.4 })
-  .from('.buttons', { x: '400px' });
-
-const writerObj = {
-  loop: true,
-  delay: 40,
-};
-
-//TYPEWRITER////////////////////////////////////////////////////////////////////////////
-let typewriter = new Typewriter(el, writerObj);
-
-typewriter
-  .pauseFor(2500)
-  .typeString('Looking for exciting opportunities to put my skills to use!')
-  .pauseFor(200)
-  .start();
-
-//INTERSECTION OBSERVER/////////////////////////////////////////////////////////////////
+//OBESRVER OF SECTIONS
 
 const obsCallBack = (entries, observer) => {
   entries.forEach(entry => {
@@ -44,8 +30,6 @@ const obsCallBack = (entries, observer) => {
     //Removing from NAV ITEMS ACTIVE STATUS
     items.forEach(item => item.classList.remove('active'));
 
-    console.log(lastEntry);
-    console.log(entry.target.id);
     //ADDING TO NAV ITEMS ACTIVE STATUS
     document
       .querySelector(`.nav__el--${entry.target.id}`)
@@ -74,11 +58,47 @@ const obsCallBack = (entries, observer) => {
     entry.target.classList.remove('hidden');
   });
 };
+
+//////////////Sticky bar observer///////////////
+
+const navCallBack = entries => {
+  const entry = entries[0];
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
+
+///////////////CODE/////////////////
+
+//GSAP////////////////////////////////////////////////////////////////////////////
+
+timeline
+  .from('.two', { y: '-400px' })
+  .from('.home__title', { x: '400px' }, '<0.3')
+  .from('.home__title2', { x: '-400px' }, '<0')
+  .from('.home__socials', { x: '400px' }, '<0')
+  .from('.home__social', { stagger: 0.5, duration: 0.4 })
+  .from('.buttons', { x: '400px' });
+
+const writerObj = {
+  loop: true,
+  delay: 40,
+};
+
+//TYPEWRITER////////////////////////////////////////////////////////////////////////////
+let typewriter = new Typewriter(el, writerObj);
+
+typewriter
+  .pauseFor(2500)
+  .typeString('Looking for exciting opportunities to put my skills to use!')
+  .pauseFor(200)
+  .start();
+
 const obsOptions = {
   root: null,
   threshold: 0.25,
 };
 
+//INTERSECTION OBSERVER////////////////////////////////
 const observer = new IntersectionObserver(obsCallBack, obsOptions);
 
 allSections.forEach(section => {
@@ -87,23 +107,29 @@ allSections.forEach(section => {
 
 // ----------------------------- TOGGLING STICKY CLASS FOR NAVIGATION BAR ------------------------------------------//
 
-const navCallBack = entries => {
-  const entry = entries[0];
-  if (!entry.isIntersecting) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
+// const navObserver = new IntersectionObserver(navCallBack, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `-${navHeight}px`,
+// });
+
+// navObserver.observe(home);
+
+// const previousScrollY = window.pageYOffset;
+let previousScrollY = window.pageYOffset;
+
+window.onscroll = () => {
+  let currentScrolly = window.pageYOffset;
+
+  if (previousScrollY > currentScrolly) {
+    nav.style.top = '0px';
+    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+    nav.style.backdropFilter = 'blur(10px)';
+  } else nav.style.top = '-100px';
+
+  previousScrollY = currentScrolly;
 };
-
-const navObserver = new IntersectionObserver(navCallBack, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight}px`,
-});
-
-navObserver.observe(home);
-
-///////////////////////////////////////////////////////////////SKILL SECTION ICONS HOVER//////////////////////////////////////////////
-
-const contentBox = document.querySelectorAll('.content__box');
+///////////////SKILL SECTION ICONS HOVER//////////////////////////////////////////////
 
 contentBox.forEach(box => {
   box.addEventListener('mouseenter', e => {
@@ -115,9 +141,7 @@ contentBox.forEach(box => {
   });
 });
 
-/////////////////////////////////OPENING MENU//////////////////////////////////////////////////////////
-const menutBtn = document.getElementById('menu__icon');
-const navigationList = document.querySelector('.navigation');
+/////////////////////////////////OPENING MENU////////////////////////////////////////////
 
 menutBtn.addEventListener('click', () => {
   navigationList.classList.toggle('open');
@@ -130,8 +154,6 @@ window.addEventListener('scroll', () => {
 });
 
 /////////////////////////////////SOCIALS after//////////////////////////////////////////////////////////
-const homeSocials = document.querySelectorAll('.home__social');
-const line = document.querySelector('.social__after');
 
 homeSocials.forEach(btn => {
   ['mouseenter', 'mouseleave'].forEach(event => {

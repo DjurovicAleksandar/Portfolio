@@ -47,7 +47,7 @@ footer {
 
 /***************************************************nav STYLING*********************************/
 nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   right: 0;
@@ -55,10 +55,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
+  background-color: transparent;
   padding: 2.2rem 21%;
   border-bottom: 0.1rem solid transparent;
-  transition: var(--transition);
+  /* transition: var(--transition); */
+  transition: 0.2s all;
 }
 
 /**********************LOGO STYLING***********************/
@@ -639,13 +640,18 @@ footer {
 }
 
 /*******************************OTHER CLASSES STYLING***************************************************/
-nav.sticky {
+/* nav.sticky {
   position: fixed;
+  top: -100px;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1rem);
   border-bottom: 0.1rem solid #2623235f;
   padding: 1.2rem 21%;
 }
+nav.sticky.stick_show {
+  top: 0;
+} */
+
 nav.sticky .navigation a {
   color: var(--second-color);
 }
