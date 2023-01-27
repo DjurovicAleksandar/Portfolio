@@ -61,15 +61,15 @@ const obsCallBack = (entries, observer) => {
 
 //////////////Sticky bar observer///////////////
 
-const navCallBack = entries => {
-  const entry = entries[0];
-  if (!entry.isIntersecting) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
-};
+// const navCallBack = entries => {
+//   const entry = entries[0];
+//   if (!entry.isIntersecting) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// };
 
 ///////////////CODE/////////////////
 
-//GSAP////////////////////////////////////////////////////////////////////////////
+//GSAP/////////////////////////////////////////
 
 timeline
   .from('.two', { y: '-400px' })
@@ -121,11 +121,16 @@ let previousScrollY = window.pageYOffset;
 window.onscroll = () => {
   let currentScrolly = window.pageYOffset;
 
-  if (previousScrollY > currentScrolly) {
-    nav.style.top = '0px';
+  (previousScrollY > currentScrolly && (nav.style.top = '0px')) ||
+    (nav.style.top = '-100px');
+
+  if (previousScrollY > 100) {
     nav.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
     nav.style.backdropFilter = 'blur(10px)';
-  } else nav.style.top = '-100px';
+  } else {
+    nav.style.backgroundColor = 'transparent';
+    nav.style.backdropFilter = 'blur(0)';
+  }
 
   previousScrollY = currentScrolly;
 };
@@ -146,6 +151,11 @@ contentBox.forEach(box => {
 menutBtn.addEventListener('click', () => {
   navigationList.classList.toggle('open');
   menutBtn.classList.toggle('bx-x');
+
+  //Nav bar color change
+  (navigationList.classList.contains('open') &&
+    (nav.style.backgroundColor = 'var(--bg-color)')) ||
+    (nav.style.backgroundColor = 'transparent');
 });
 
 window.addEventListener('scroll', () => {

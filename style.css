@@ -86,26 +86,23 @@ span {
 }
 .navigation a {
   color: var(--bg-color);
-
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 0 2.5rem;
   transition: var(--transition);
-  border: 1px solid transparent;
+  border-bottom: 0.1rem solid transparent;
   border-radius: 50%;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
 }
 .navigation a:hover {
-  border-color: var(--main-color);
+  border-bottom-color: var(--main-color);
   color: var(--main-color);
 }
 .navigation a.active {
   color: var(--main-color);
-  box-shadow: 0rem 0rem 1rem 0.3rem var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
 }
-nav i:hover {
-  transform: scale(1.1);
-}
+
 #menu__icon {
   font-size: 3.5rem;
   color: var(--text-color);
@@ -723,6 +720,7 @@ nav.sticky .navigation a {
     display: block;
     margin-right: 0.5rem;
   }
+
   .navigation {
     position: absolute;
     top: -100rem;
@@ -733,7 +731,9 @@ nav.sticky .navigation a {
     background-color: var(--bg-color);
     text-align: center;
     transition: var(--transition);
+    height: 100vh;
   }
+
   .navigation a {
     display: inline-block;
     margin: 1.7rem;
