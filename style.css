@@ -7,13 +7,14 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  /* border: 1px solid black; */
 }
 :root {
   --bg-color: #eee1c6;
   --second-bg-color: #e8d6b3;
   --text-color: #382828;
-  --second-color: #402f2f;
-  --main-color: #15be88;
+  --second-color: #544242;
+  --main-color: #0c8962;
 
   --big-font: 8rem;
   --h2-font: 4.8rem;
@@ -65,11 +66,14 @@ nav {
 /**********************LOGO STYLING***********************/
 .logo {
   color: var(--bg-color);
-  text-shadow: 0rem 0.3rem 0.2rem var(--text-color);
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   transition: var(--transition);
+
+  border-color: transparent;
+  background: transparent;
+  color: var(--main-color);
 }
 span {
   color: var(--main-color);
@@ -77,22 +81,33 @@ span {
 
 .logo__span {
   display: inline-block;
-  transform: translateY(1.4rem);
+  transform: translate(0.1rem, 1.5rem);
+  border-radius: 10px;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  border-color: transparent;
 }
 
 /**********************NAV ITEMS STYLING***********************/
 .navigation {
   display: flex;
 }
+.navigation li {
+  border: 1px solid black;
+}
 .navigation a {
-  color: var(--bg-color);
+  color: black;
   font-size: 1.2rem;
   margin: 0 2.5rem;
   transition: var(--transition);
+  border: 1px solid black;
   border-bottom: 0.1rem solid transparent;
+  border-top: 0.1rem solid transparent;
   border-radius: 50%;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
+  font-weight: 700;
+  /* box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.8); */
 }
 .navigation a:hover {
   border-bottom-color: var(--main-color);
@@ -126,9 +141,12 @@ span {
   justify-content: flex-start;
   border-bottom: 0.5px solid var(--text-color);
 }
-
+.home__text {
+  padding: 1rem;
+}
 .slide {
   margin: 0rem 0 0.1rem -0.2rem;
+  border-color: transparent;
 }
 /**********************HEADING TEXT BOX STYLING***********************/
 .two {
@@ -137,6 +155,7 @@ span {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--bg-color);
+  border-color: transparent;
 }
 
 .home__text h1 {
@@ -159,6 +178,16 @@ span {
   line-height: 1.8;
   margin-bottom: 4rem;
 }
+.home__title {
+  border-color: transparent;
+}
+.home__title2 {
+  border-color: transparent;
+}
+
+.p__animate {
+  border-color: transparent;
+}
 
 .home__socials {
   position: absolute;
@@ -167,6 +196,7 @@ span {
   flex-direction: column;
   left: 75%;
   top: 35%;
+  border-color: transparent;
 }
 
 .social__after {
@@ -335,71 +365,102 @@ span {
 /**********************CONTENT STYLING***********************/
 .skills__content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  align-items: center;
-  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 3rem;
   margin-top: 9rem;
+  justify-items: center;
 }
 
 .content__box {
   background-color: var(--bg-color);
-  padding: 2.4rem 4.8rem;
   border-radius: 0.8rem;
-  transition: var(--transition);
+  transition: 0.2s ease-in-out;
+  width: fit-content;
 }
 
 .content__box h3 {
   font-size: 2.4rem;
   font-weight: 600;
   color: var(--text-color);
-  margin-bottom: 1.5rem;
+}
+.face__list {
+  width: fit-content;
+  padding: 1rem 1rem;
+  margin: 0 auto;
 }
 
-.content__box h6,
-.content__box p {
-  color: var(--second-color);
+.face__list-item {
+  color: var(--bg-color);
   font-size: var(--p-font);
-  letter-spacing: 0.5rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  text-align: center;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  width: fit-content;
+  font-style: italic;
+  border-color: transparent;
 }
-.skill__img {
-  text-align: center;
-}
+
 .content__icon {
-  /* width: 18rem;
-  height: 18rem; */
+  transition: var(--transition);
   width: 10rem;
   height: 10rem;
 }
+/* 
 
-.content__box:hover {
-  transform: translateY(-0.8rem);
-  cursor: pointer;
-  box-shadow: 0.5rem 0.5rem 1rem 0.1rem var(--text-color);
+/*FACE*/
+.face {
+  width: 30rem;
+  height: 20rem;
 }
 
-/**********************************CAROUSEL*********************************************/
-/* .skills__carousel {
+.face-one {
   position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  width: 100%;
-  padding: 7rem 0;
-
-  margin-top: 5rem;
-}
-.skills__list {
-  width: 100%;
+  background: var(--bg-color);
+  z-index: 1;
+  transition: var(--transition);
+  border-radius: 10px;
+  transform: translateY(10rem);
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-} */
+  justify-content: center;
+}
+.face-two {
+  position: relative;
+  background: var(--second-color);
+  transition: var(--transition);
+  box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  transform: translateY(-10rem);
+  padding: 1rem 2rem;
+}
+
+.face__title {
+  color: var(--main-color);
+}
+
+.tools__list {
+  width: 100%;
+  display: grid;
+  column-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  align-items: center;
+}
+
+.tool__icon {
+  width: 5rem;
+}
+
+.content__box:hover .face-one {
+  transform: translateY(0);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.content__box:hover .face-two {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+
+  transform: translateY(0);
+}
 
 /**********************************PORTOFLIO SECTION STYLING*********************************************/
 .portfolio__content {
@@ -636,31 +697,10 @@ footer {
   background: var(--main-color);
 }
 
-/*******************************OTHER CLASSES STYLING***************************************************/
-/* nav.sticky {
-  position: fixed;
-  top: -100px;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1rem);
-  border-bottom: 0.1rem solid #2623235f;
-  padding: 1.2rem 21%;
-}
-nav.sticky.stick_show {
-  top: 0;
-} */
-
-nav.sticky .navigation a {
-  color: var(--second-color);
-}
-
 /*******************************MEDIA QUERIES********************************************************/
 @media (max-width: 1480px) {
   nav {
     padding: 1.2rem 2.5%;
-    transition: 100ms;
-  }
-  nav.sticky {
-    padding: 1rem 2.5%;
     transition: 100ms;
   }
 
@@ -737,9 +777,8 @@ nav.sticky .navigation a {
   .navigation a {
     display: inline-block;
     margin: 1.7rem;
-    color: var(--text-color);
+    color: black;
   }
-
   .navigation.open {
     top: 100%;
   }
