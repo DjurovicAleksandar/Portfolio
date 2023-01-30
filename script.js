@@ -59,14 +59,6 @@ const obsCallBack = (entries, observer) => {
   });
 };
 
-//////////////Sticky bar observer///////////////
-
-// const navCallBack = entries => {
-//   const entry = entries[0];
-//   if (!entry.isIntersecting) nav.classList.add('sticky');
-//   else nav.classList.remove('sticky');
-// };
-
 ///////////////CODE/////////////////
 
 //GSAP/////////////////////////////////////////
@@ -81,39 +73,33 @@ timeline
 
 const writerObj = {
   loop: true,
-  delay: 40,
+  delay: 20,
 };
 
-//TYPEWRITER////////////////////////////////////////////////////////////////////////////
+//-----------------Typewriter----------------------------------//
 let typewriter = new Typewriter(el, writerObj);
 
 typewriter
   .pauseFor(2500)
-  .typeString('Looking for exciting opportunities to put my skills to use!')
+  .typeString(
+    'Looking for exciting opportunities to put my skills to use, and I have a few!'
+  )
   .pauseFor(200)
   .start();
 
+//--------------------INTERSECTION OBSERVER-----------------//
 const obsOptions = {
   root: null,
   threshold: 0.25,
 };
 
-//INTERSECTION OBSERVER////////////////////////////////
 const observer = new IntersectionObserver(obsCallBack, obsOptions);
 
 allSections.forEach(section => {
   observer.observe(section);
 });
 
-// ----------------------------- TOGGLING STICKY CLASS FOR NAVIGATION BAR ------------------------------------------//
-
-// const navObserver = new IntersectionObserver(navCallBack, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-${navHeight}px`,
-// });
-
-// navObserver.observe(home);
+// -----------------NAVIGATION BAR ON SCROLL---------------//
 
 // const previousScrollY = window.pageYOffset;
 let previousScrollY = window.pageYOffset;
@@ -125,8 +111,8 @@ window.onscroll = () => {
     (nav.style.top = '-100px');
 
   if (previousScrollY > 100) {
-    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-    nav.style.backdropFilter = 'blur(10px)';
+    nav.style.backgroundColor = 'transparent';
+    nav.style.backdropFilter = 'blur(5px)';
   } else {
     nav.style.backgroundColor = 'transparent';
     nav.style.backdropFilter = 'blur(0)';
@@ -134,20 +120,21 @@ window.onscroll = () => {
 
   previousScrollY = currentScrolly;
 };
-///////////////SKILL SECTION ICONS HOVER//////////////////////////////////////////////
+//---------------Skill section: SKILL ICON COLORING-------------//
 
 contentBox.forEach(box => {
   box.addEventListener('mouseenter', e => {
     const image = e.target.querySelector('.content__icon');
     image.src = `./img/skills/${image.alt}-color.svg`;
+    image.style.transform = 'scale(1.4)';
     box.addEventListener('mouseleave', e => {
       image.src = `./img/skills/${image.alt}.svg`;
+      image.style.transform = 'scale(1)';
     });
   });
 });
 
-/////////////////////////////////OPENING MENU////////////////////////////////////////////
-
+//-----------------------TOGGLING NAVIGATION OPEN CLASS----------//
 menutBtn.addEventListener('click', () => {
   navigationList.classList.toggle('open');
   menutBtn.classList.toggle('bx-x');
@@ -170,44 +157,3 @@ homeSocials.forEach(btn => {
     btn.addEventListener(event, () => line.classList.toggle('position'));
   });
 });
-
-//CAROUSEL MOVING// IN SKILL SECTION//
-
-// const carouselMovement = () => {
-//   const carousel = document.querySelector('.skills__carousel');
-//   const list = document.querySelector('.skills__list');
-//   let secondList;
-
-//   const speed = 1;
-//   const width = list.offsetWidth;
-
-//   let decrement = 0;
-//   let secondDecrement = width;
-
-//   function clone() {
-//     secondList = list.cloneNode(true);
-//     carousel.appendChild(secondList);
-//     secondList.style.left = `${width}px`;
-//   }
-
-//   function firstListMovement() {
-//     decrement -= speed;
-
-//     if (width >= Math.abs(decrement)) list.style.left = `${decrement}px`;
-//     else decrement = width;
-//   }
-
-//   function secondListMovement() {
-//     secondDecrement -= speed;
-//     if (secondList.offsetWidth >= Math.abs(secondDecrement))
-//       secondList.style.left = `${secondDecrement}px`;
-//     else secondDecrement = width;
-//   }
-
-//   clone();
-
-//   let aMove = setInterval(firstListMovement, 20);
-//   let bMove = setInterval(secondListMovement, 20);
-// };
-
-// carouselMovement();
