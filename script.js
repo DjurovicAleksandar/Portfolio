@@ -81,10 +81,13 @@ let typewriter = new Typewriter(el, writerObj);
 
 typewriter
   .pauseFor(2500)
-  .typeString(
-    'Looking for exciting opportunities to put my skills to use, and I have a few!'
-  )
+  .typeString('Welcome to my page')
+  .pauseFor(300)
+  .deleteAll(20)
+  .typeString('Looking for exciting opportunities to put my skills to use')
   .pauseFor(200)
+  .deleteAll(20)
+
   .start();
 
 //--------------------INTERSECTION OBSERVER-----------------//

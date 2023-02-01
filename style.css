@@ -71,7 +71,6 @@ nav {
   letter-spacing: 0.1rem;
   transition: var(--transition);
 
-  border-color: transparent;
   background: transparent;
   color: var(--main-color);
 }
@@ -85,7 +84,6 @@ span {
   /* border-radius: 10px; */
   background-color: var(--main-color);
   color: var(--bg-color);
-  border-color: transparent;
 }
 
 /**********************NAV ITEMS STYLING***********************/
@@ -146,7 +144,6 @@ span {
 }
 .slide {
   margin: 0rem 0 0.1rem -0.2rem;
-  border-color: transparent;
 }
 /**********************HEADING TEXT BOX STYLING***********************/
 .two {
@@ -155,7 +152,6 @@ span {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--bg-color);
-  border-color: transparent;
 }
 
 .home__text h1 {
@@ -163,7 +159,6 @@ span {
   font-weight: 700;
   margin: 0 0 0.8rem;
   line-height: 1.1;
-  /* letter-spacing: 1.1rem; */
 }
 .home__text h3 {
   margin: 0 0 3.5rem;
@@ -178,15 +173,9 @@ span {
   line-height: 1.8;
   margin-bottom: 4rem;
 }
-.home__title {
-  border-color: transparent;
-}
-.home__title2 {
-  border-color: transparent;
-}
 
 .p__animate {
-  border-color: transparent;
+  font-weight: 600;
 }
 
 .home__socials {
@@ -196,7 +185,6 @@ span {
   flex-direction: column;
   left: 75%;
   top: 35%;
-  border-color: transparent;
 }
 
 .social__after {
@@ -397,7 +385,6 @@ span {
   font-size: 1.2rem;
   width: fit-content;
   font-style: italic;
-  border-color: transparent;
 }
 
 .content__icon {
@@ -492,7 +479,7 @@ span {
 .layer {
   width: 100%;
   height: 0%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--second-color));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
   position: absolute;
   /* border-radius: 0.8rem; */
   left: 0;
@@ -514,10 +501,11 @@ span {
 }
 
 .layer h5 {
-  color: var(--main-color);
-  text-shadow: 0rem 0.1rem 0.1rem white;
-  font-size: 1.2rem;
-  font-weight: 600;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -525,6 +513,7 @@ span {
   color: white;
   font-size: 1.2rem;
   line-height: 1.8;
+  margin-bottom: 0.5rem;
 }
 
 .layer i {
@@ -543,11 +532,29 @@ span {
   transition: var(--transition);
 }
 
+.layer__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.layer__list-item {
+  width: 1.8rem;
+}
+.layer__list-item span {
+  color: white;
+  font-weight: 700;
+}
+.layer__icon {
+  max-width: 100%;
+}
+
 /**********************LAYER HOVER  STYLING***********************/
 .layer i:hover {
   background: transparent;
   color: var(--bg-color);
-  border-color: transparent;
 
   transform: scale(1.3);
 }
