@@ -151,8 +151,9 @@ span {
   display: inline-block;
   color: var(--second-color);
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--bg-color);
+  margin-left: 1rem;
 }
 
 .home__text h1 {

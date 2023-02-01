@@ -84,9 +84,8 @@ typewriter
   .typeString('Welcome to my page')
   .pauseFor(300)
   .deleteAll(20)
-  .typeString('Looking for exciting opportunities to put my skills to use')
-  .pauseFor(200)
-  .deleteAll(20)
+  .typeString('Feel like home')
+  .pauseFor(300)
 
   .start();
 
