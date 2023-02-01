@@ -1,13 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 /**********************GENERAL STYLING***********************/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
-  /* border: 1px solid black; */
 }
 :root {
   --bg-color: #eee1c6;
@@ -29,6 +28,7 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
 }
 
 section {
@@ -82,7 +82,7 @@ span {
 .logo__span {
   display: inline-block;
   transform: translate(0.1rem, 1.5rem);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: var(--main-color);
   color: var(--bg-color);
   border-color: transparent;
@@ -103,7 +103,7 @@ span {
   border: 1px solid black;
   border-bottom: 0.1rem solid transparent;
   border-top: 0.1rem solid transparent;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   font-weight: 700;
@@ -225,7 +225,7 @@ span {
   justify-content: center;
   padding: 1rem 2rem;
 
-  border-radius: 50%;
+  /* border-radius: 50%; */
   transition: var(--transition);
 }
 
@@ -241,7 +241,7 @@ span {
   padding: 1.2rem 2.8rem;
   background: var(--main-color);
   /* border: 0.1rem solid transparent; */
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   color: var(--text-color);
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
@@ -373,7 +373,7 @@ span {
 
 .content__box {
   background-color: var(--bg-color);
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
   transition: 0.2s ease-in-out;
   width: fit-content;
 }
@@ -418,7 +418,7 @@ span {
   background: var(--bg-color);
   z-index: 1;
   transition: var(--transition);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   transform: translateY(10rem);
   display: flex;
   align-items: center;
@@ -429,7 +429,7 @@ span {
   background: var(--second-color);
   transition: var(--transition);
   box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   transform: translateY(-10rem);
   padding: 1rem 2rem;
 }
@@ -475,14 +475,14 @@ span {
 .row {
   position: relative;
   overflow: hidden;
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
   cursor: pointer;
 }
 
 .row img {
   width: 100%;
   max-width: 100%;
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
   display: block;
   transition: transform 500ms;
 }
@@ -494,7 +494,7 @@ span {
   height: 0%;
   background: linear-gradient(rgba(0, 0, 0, 0.1), var(--second-color));
   position: absolute;
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
   left: 0;
   bottom: 0;
   overflow: hidden;
@@ -538,7 +538,7 @@ span {
   justify-content: center;
   align-items: center;
   border: 0.5px solid var(--main-color);
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
 
   transition: var(--transition);
 }
@@ -581,40 +581,13 @@ span {
   font-size: var(--h2-font);
   line-height: 1;
 }
-/* 
-.contact__text p {
-  column-rule: var(--second-color);
-  font-size: var(--p-font);
-  line-height: 1.8;
-  margin-bottom: 3rem;
-} */
 
-/**********************CONTACT LIST STYLING***********************/
-/* .contact__list {
-  margin-bottom: 1.2rem;
-}
-
-.contact__list li {
-  margin-bottom: 1.2rem;
-}
-
-.contact__list li a {
-  display: block;
-  color: var(--second-color);
-  font-size: 1.4rem;
-  transition: var(--transition);
-}
-
-.contact__list li a:hover {
-  color: var(--text-color);
-  transform: translateX(0.5rem);
-} */
 iframe {
   display: flex;
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.3);
 }
 
@@ -634,7 +607,7 @@ iframe {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
   transition: var(--transition);
 }
 
@@ -652,7 +625,7 @@ form textarea {
   background-color: var(--bg-color);
   color: var(--text-color);
   border: none;
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
   font-size: 1.4rem;
   outline: none;
   margin-bottom: 1rem;
@@ -691,7 +664,7 @@ footer {
 }
 .footer__top i {
   padding: 1rem;
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
   font-size: 1.5rem;
   color: var(--text-color);
   background: var(--main-color);
@@ -772,6 +745,9 @@ footer {
     text-align: center;
     transition: var(--transition);
     height: 100vh;
+  }
+  .navigation li {
+    border: transparent;
   }
 
   .navigation a {
