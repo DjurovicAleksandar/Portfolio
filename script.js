@@ -81,13 +81,13 @@ let typewriter = new Typewriter(el, writerObj);
 
 typewriter
   .pauseFor(2500)
-  .typeString(" I'm glad you stopped by.")
+  .typeString(" It's a great you stopped by.")
   .pauseFor(250)
   .deleteAll(20)
   .typeString('My portfolio is ready for you to explore.')
   .pauseFor(800)
   .deleteAll(20)
-  .typeString('Have fun!')
+  .typeString('Make yourself comfortable and have fun!')
   .pauseFor(250)
   .start();
 

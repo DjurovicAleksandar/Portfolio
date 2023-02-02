@@ -80,7 +80,7 @@ span {
 
 .logo__span {
   display: inline-block;
-  transform: translate(-0.9rem, 0.5rem);
+  transform: translate(-1.2rem, 0.5rem);
   background-color: var(--main-color);
   color: var(--bg-color);
 }
@@ -90,7 +90,6 @@ span {
   display: flex;
 }
 .navigation li {
-  /* border: 1px solid black; */
   border-right: transparent;
   border-left: transparent;
 }
@@ -150,7 +149,7 @@ span {
 .two {
   display: inline-block;
   color: var(--second-color);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--bg-color);
   margin-left: 1rem;
@@ -613,8 +612,6 @@ iframe {
 .contact__form form {
   position: relative;
   text-align: center;
-
-  /* border: 1px solid var(--bg-color); */
 }
 .contact__form form input,
 form textarea {
@@ -761,5 +758,8 @@ footer {
 
   .layer p {
     font-size: 0.9rem;
+  }
+  .two {
+    font-size: 0.8rem;
   }
 }
