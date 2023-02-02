@@ -81,9 +81,6 @@ let typewriter = new Typewriter(el, writerObj);
 
 typewriter
   .pauseFor(2500)
-  .typeString('Greeting!')
-  .pauseFor(200)
-  .deleteAll(20)
   .typeString(" I'm glad you stopped by.")
   .pauseFor(250)
   .deleteAll(20)
