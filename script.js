@@ -81,18 +81,23 @@ let typewriter = new Typewriter(el, writerObj);
 
 typewriter
   .pauseFor(2500)
-  .typeString('Welcome to my page')
-  .pauseFor(300)
+  .typeString('Greeting!')
+  .pauseFor(200)
   .deleteAll(20)
-  .typeString('Feel like home')
-  .pauseFor(300)
-
+  .typeString(" I'm glad you stopped by.")
+  .pauseFor(250)
+  .deleteAll(20)
+  .typeString('My portfolio is ready for you to explore.')
+  .pauseFor(800)
+  .deleteAll(20)
+  .typeString('Have fun!')
+  .pauseFor(250)
   .start();
 
 //--------------------INTERSECTION OBSERVER-----------------//
 const obsOptions = {
   root: null,
-  threshold: 0.25,
+  threshold: 0.15,
 };
 
 const observer = new IntersectionObserver(obsCallBack, obsOptions);
@@ -103,7 +108,6 @@ allSections.forEach(section => {
 
 // -----------------NAVIGATION BAR ON SCROLL---------------//
 
-// const previousScrollY = window.pageYOffset;
 let previousScrollY = window.pageYOffset;
 
 window.onscroll = () => {
