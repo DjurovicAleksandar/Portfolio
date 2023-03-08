@@ -462,7 +462,6 @@ span {
 .row {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .row img {
@@ -495,6 +494,7 @@ span {
 .layer__btns {
   display: flex;
   gap: 2rem;
+  cursor: pointer;
 }
 
 .layer h5 {
