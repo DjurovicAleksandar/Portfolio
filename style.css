@@ -85,7 +85,7 @@ nav {
   transition: var(--transition);
   background: transparent;
   color: var(--main-color);
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   padding-left: 5px;
 }
 span {
@@ -151,7 +151,6 @@ span {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 0.5px solid var(--text-color);
 }
 
 .home__text {
@@ -193,6 +192,7 @@ span {
 
 .p__animate {
   font-weight: 600;
+  height: 5rem;
 }
 
 .home__socials {
@@ -200,8 +200,8 @@ span {
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  left: 75%;
-  top: 35%;
+  right: 4%;
+  top: 30%;
   z-index: 10;
 }
 
@@ -468,30 +468,25 @@ span {
 .tools__list {
   width: 100%;
   display: grid;
-  column-gap: 6rem;
+  column-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(0.1rem, 1fr));
   align-items: center;
 }
 
 .tool__icon {
-  width: 5rem;
+  width: 3rem;
 }
 
 .content__box:hover .mario {
-  /* box-shadow: -1.2rem 0.2rem 1.2rem rgba(0, 0, 0, 0.4); */
   opacity: 1;
   bottom: -4.9rem;
 }
 .content__box:hover .mario__audioio {
-  /* box-shadow: -1.2rem 0.2rem 1.2rem rgba(0, 0, 0, 0.4); */
-  /* opacity: 1;
-  bottom: -4.9rem; */
 }
 
 .content__box:hover .face-one {
   transform: translateY(0);
   box-shadow: none;
-  /* background: var(--main-color); */
   background: transparent;
 }
 .content__box:hover .face-two {
@@ -503,7 +498,7 @@ span {
 /**********************************PORTOFLIO SECTION STYLING*********************************************/
 .portfolio__content {
   width: 100%;
-  columns: 2;
+  columns: 3;
   margin-top: 9rem;
 }
 
@@ -514,14 +509,14 @@ span {
   margin-bottom: 10px;
   box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.3);
   opacity: 0.7;
-  transition: all 700ms easy-in-out;
+  transition: all 300ms easy-in-out;
 }
 
 .row img {
   width: 100%;
   max-width: 100%;
   display: block;
-  transition: transform 800ms ease-in-out;
+  transition: transform 400ms ease-in-out;
 }
 
 /**********************ROW LAYER STYLING***********************/
@@ -541,7 +536,7 @@ span {
   justify-content: center;
   text-align: center;
   padding: 0 4rem;
-  transition: height 1200ms;
+  transition: height 500ms;
 }
 
 .layer__btns {
@@ -550,6 +545,7 @@ span {
   justify-content: center;
   gap: 2rem;
   cursor: pointer;
+  width: 100%;
 }
 
 .layer h5 {
@@ -562,16 +558,15 @@ span {
 }
 
 .layer i {
-  color: var(--main-color);
+  color: var(--bg-color);
   margin-top: 1.5rem;
   font-size: 2rem;
-  background-color: var(--text-color);
   height: 4rem;
   width: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .layer__list {
@@ -593,10 +588,12 @@ span {
   max-width: 100%;
 }
 
+.api__text {
+  font-size: 0.6rem;
+}
+
 /**********************LAYER HOVER  STYLING***********************/
 .layer i:hover {
-  background: transparent;
-  color: var(--bg-color);
   transform: scale(1.5);
 }
 .layer i:active {
@@ -735,6 +732,9 @@ footer a {
 
 /*******************************MEDIA QUERIES********************************************************/
 @media (max-width: 1480px) {
+  .portfolio__content {
+    columns: 2;
+  }
   nav {
     padding: 1.2rem 2.5%;
     transition: 100ms;

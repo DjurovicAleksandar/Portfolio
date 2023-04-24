@@ -22,6 +22,7 @@ const marioPng = document.querySelector('.mario');
 
 ////Mario audio on hover - Fist element in the array is JS, where mario is
 contentBox[0].addEventListener('mouseenter', e => {
+  marioAudio.volume = 0.01;
   marioAudio.play();
   contentBox[0].addEventListener('mouseleave', () => {
     marioAudio.pause();
