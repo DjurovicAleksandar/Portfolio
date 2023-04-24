@@ -35,7 +35,6 @@ contentBox[0].addEventListener('mouseenter', e => {
 
 const obsCallBack = (entries, observer) => {
   entries.forEach(entry => {
-    const lastEntry = entry.target.id;
     if (!entry.isIntersecting) return;
 
     /////// ADDING ACTIVE CLASS TO NAV ITEMS//////////////////////////////////////////////
