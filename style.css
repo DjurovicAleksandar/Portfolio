@@ -200,8 +200,8 @@ span {
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  right: 4%;
-  top: 30%;
+  left: 75%;
+  top: 35%;
   z-index: 10;
 }
 
@@ -498,7 +498,7 @@ span {
 /**********************************PORTOFLIO SECTION STYLING*********************************************/
 .portfolio__content {
   width: 100%;
-  columns: 3;
+  columns: 2;
   margin-top: 9rem;
 }
 
@@ -732,9 +732,6 @@ footer a {
 
 /*******************************MEDIA QUERIES********************************************************/
 @media (max-width: 1480px) {
-  .portfolio__content {
-    columns: 2;
-  }
   nav {
     padding: 1.2rem 2.5%;
     transition: 100ms;
