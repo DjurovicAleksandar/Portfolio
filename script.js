@@ -16,6 +16,18 @@ const navigationList = document.querySelector('.navigation');
 //
 const homeSocials = document.querySelectorAll('.home__social');
 const line = document.querySelector('.social__after');
+//select mario
+const marioAudio = document.querySelector('.mario__audio');
+const marioPng = document.querySelector('.mario');
+
+////Mario audio on hover - Fist element in the array is JS, where mario is
+contentBox[0].addEventListener('mouseenter', e => {
+  marioAudio.play();
+  contentBox[0].addEventListener('mouseleave', () => {
+    marioAudio.pause();
+    marioAudio.currentTime = 0;
+  });
+});
 
 /////////////// Observer functions //////////////////
 

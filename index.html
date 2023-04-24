@@ -83,38 +83,29 @@
     <!------------------------ ABOUT SECTION--------------------------->
     <section class="about section hidden" id="about">
       <div class="about__img">
-        <img src="./img/me3.png" loading="lazy" alt="Aleksandar Đurović" />
+        <img src="./img/me3.jpg" loading="lazy" alt="Aleksandar Đurović" />
       </div>
       <div class="about__text">
         <h2>About <span>Me</span></h2>
         <h4>Who am I?</h4>
         <div class="p__box">
           <p>
-            I am Aleksandar Đurović, a self-taught frontend developer with a
-            year and a half of experience in the field. I have honed my
-            expertise in the front-end field and am constantly seeking
-            opportunities to further develop my abilities.
+            Hey there! I'm Aleksandar Đurović, a self-taught frontend developer
+            with nearly two years of experience. I love working on challenging
+            projects that push me to grow and develop my skills. With my
+            technical expertise and attention to detail, I've successfully built
+            and maintained websites and applications.
           </p>
           <p>
-            Working on projects that pose a challenge and require growth is what
-            I love most about this field. I have a strong determination and
-            persistence that drives me to tackle difficult tasks, and I believe
-            that nothing is impossible. My technical skills and attention to
-            detail have allowed me to successfully build websites and
-            applications from scratch, as well as update and maintain existing
-            ones.
+            When I'm not coding, I enjoy yoga, meditating, mixing cocktails,
+            kayaking, and exploring the great outdoors. I'm also passionate
+            about philosophy and believe that being a well-rounded individual
+            helps me bring fresh perspectives to my work.
           </p>
           <p>
-            In my free time, I enjoy yoga, meditating, and mixing cocktails. I
-            also have a passion for kayaking and the great outdoors, as well as
-            philosophy. I believe in bringing my knowledge from other areas into
-            my work and strive to be a well-rounded individual.
-          </p>
-          <p>
-            I am open to both freelance and full-time employment opportunities
-            and would love the chance to bring my skills and determination to a
-            new project. If you are interested in working with me, please don't
-            hesitate to reach out!
+            I'm open to freelance and full-time opportunities and would love to
+            work with you on your next project. Don't hesitate to reach out if
+            you're interested in working together!
           </p>
         </div>
         <div style="text-align: center; margin-bottom: 1.5rem">
@@ -138,7 +129,11 @@
 
       <div class="skills__content">
         <!-- JavaScript -->
+        <audio class="mario__audio" preload="auto">
+          <source src="./mario.mp3" type="audio/mpeg" />
+        </audio>
         <div class="content__box">
+          <img class="mario" src="./img/mario.png" />
           <div class="face face-one">
             <img
               class="content__icon"
@@ -330,61 +325,119 @@
       </div>
 
       <div class="portfolio__content">
-        <!-- Portfolio -->
+        <!-- Epic journeys -->
         <div class="row">
-          <img loading="lazy" src="./img/portfolio1.jpg" alt="Portfolio" />
+          <img loading="lazy" src="./img/portfolio3.jpg" alt="EpicJourneys" />
           <div class="layer">
             <div class="layer__text">
-              <h5>Personal portoflio</h5>
+              <h5>EpicJourneys</h5>
 
               <ul class="layer__list">
                 <li class="layer__list-item">
                   <img
                     class="layer__icon"
-                    src="./img/skills/javascript-color.svg"
-                    alt="javaScript"
+                    src="./img/skills/react-color.svg"
+                    alt="React"
                   />
                 </li>
 
                 <li class="layer__list-item">
                   <img
                     class="layer__icon"
-                    src="./img/skills/html5-color.svg"
-                    alt="Html5"
+                    src="./img/skills/tailwind-color.svg"
+                    alt="tailwind"
                   />
                 </li>
 
                 <li class="layer__list-item">
                   <img
                     class="layer__icon"
-                    src="./img/skills/css3-color.svg"
-                    alt="Css3"
+                    src="./img/toolIcons/firebase.png"
+                    alt="firebase"
                   />
                 </li>
-
                 <li class="layer__list-item">
                   <img
                     class="layer__icon"
-                    src="./img/skills/library.svg"
-                    alt="gsap"
+                    src="./img/toolIcons/vite.svg"
+                    alt="vite"
                   />
-                  <span>Gsap</span>
                 </li>
-
                 <li class="layer__list-item">
                   <img
                     class="layer__icon"
-                    src="./img/skills/library.svg"
-                    alt="typewriterJS"
+                    src="./img/skills/api.png"
+                    alt="restCountier"
                   />
-                  <span>Typewriter</span>
+
+                  <a
+                    style="color: white"
+                    href="https://restcountries.com/"
+                    target="_blank"
+                    >restCountries</a
+                  >
                 </li>
               </ul>
             </div>
             <div class="layer__btns">
+              <a target="_blank" href="https://epicjourneys.netlify.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
               <a
                 target="_blank"
-                href="https://github.com/DjurovicAleksandar/Portfolio"
+                href="https://github.com/DjurovicAleksandar/epicJourneys"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Ekonobar project -->
+        <div class="row">
+          <img loading="lazy" src="./img/portfolio4.jpg" alt="eKonobar" />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Ekonobar - QR Caffe application <br />(in development)</h5>
+
+              <ul class="layer__list">
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/skills/react-color.svg"
+                    alt="React"
+                  />
+                </li>
+
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/skills/tailwind-color.svg"
+                    alt="tailwind"
+                  />
+                </li>
+
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/toolIcons/firebase.png"
+                    alt="firebase"
+                  />
+                </li>
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/toolIcons/vite.svg"
+                    alt="vite"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="layer__btns">
+              <a target="_blank" href="https://ekonobar-a4f2b.web.app/"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/eKonobar"
                 ><i class="bx bxl-github"></i
               ></a>
             </div>
@@ -395,7 +448,10 @@
           <img loading="lazy" src="./img/portfolio5.jpg" alt="screenSleuth" />
           <div class="layer">
             <div class="layer__text">
-              <h5>ScreenSleuth - the movie database</h5>
+              <h5>
+                ScreenSleuth<br />
+                TMDB (CRUD)
+              </h5>
 
               <ul class="layer__list">
                 <li class="layer__list-item">
@@ -460,6 +516,67 @@
             </div>
           </div>
         </div>
+        <!-- Portfolio -->
+        <div class="row">
+          <img loading="lazy" src="./img/portfolio1.jpg" alt="Portfolio" />
+          <div class="layer">
+            <div class="layer__text">
+              <h5>Personal portoflio</h5>
+
+              <ul class="layer__list">
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/skills/javascript-color.svg"
+                    alt="javaScript"
+                  />
+                </li>
+
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/skills/html5-color.svg"
+                    alt="Html5"
+                  />
+                </li>
+
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/skills/css3-color.svg"
+                    alt="Css3"
+                  />
+                </li>
+
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/skills/library.svg"
+                    alt="gsap"
+                  />
+                  <span>Gsap</span>
+                </li>
+
+                <li class="layer__list-item">
+                  <img
+                    class="layer__icon"
+                    src="./img/skills/library.svg"
+                    alt="typewriterJS"
+                  />
+                  <span>Typewriter</span>
+                </li>
+              </ul>
+            </div>
+            <div class="layer__btns">
+              <a
+                target="_blank"
+                href="https://github.com/DjurovicAleksandar/Portfolio"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
         <!--Loop stdio-->
         <div class="row">
           <img loading="lazy" src="./img/portfolio6.jpg" alt="loopstudio" />
@@ -562,112 +679,17 @@
             </div>
           </div>
         </div>
-        <!-- Mapty project -->
-        <div class="row">
-          <img loading="lazy" src="./img/portfolio3.jpg" alt="Mapty" />
-          <div class="layer">
-            <div class="layer__text">
-              <h5>MaptyProject application</h5>
-
-              <ul class="layer__list">
-                <li class="layer__list-item">
-                  <img
-                    class="layer__icon"
-                    src="./img/skills/javascript-color.svg"
-                    alt="javaScript"
-                  />
-                </li>
-
-                <li class="layer__list-item">
-                  <img
-                    class="layer__icon"
-                    src="./img/skills/html5-color.svg"
-                    alt="Html5"
-                  />
-                </li>
-
-                <li class="layer__list-item">
-                  <img
-                    class="layer__icon"
-                    src="./img/skills/css3-color.svg"
-                    alt="Css3"
-                  />
-                </li>
-                <li class="layer__list-item">
-                  <img
-                    class="layer__icon"
-                    src="./img/skills/npm.png"
-                    alt="Api"
-                  />
-                </li>
-
-                <li class="layer__list-item">
-                  <img
-                    class="layer__icon"
-                    src="./img/skills/library.svg"
-                    alt="libary"
-                  />
-                  <span>Leaflet</span>
-                </li>
-              </ul>
-            </div>
-            <div class="layer__btns">
-              <a target="_blank" href="https://mapyourexercise.netlify.app/"
-                ><i class="bx bx-link-external"></i
-              ></a>
-              <a
-                target="_blank"
-                href="https://github.com/DjurovicAleksandar/MaptyProject"
-                ><i class="bx bxl-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <!-- Omni food project -->
-        <div class="row">
-          <img loading="lazy" src="./img/portfolio4.jpg" alt="Omnifood" />
-          <div class="layer">
-            <div class="layer__text">
-              <h5>Omnifood project</h5>
-
-              <ul class="layer__list">
-                <li class="layer__list-item">
-                  <img
-                    class="layer__icon"
-                    src="./img/skills/html5-color.svg"
-                    alt="Html5"
-                  />
-                </li>
-
-                <li class="layer__list-item">
-                  <img
-                    class="layer__icon"
-                    src="./img/skills/css3-color.svg"
-                    alt="Css3"
-                  />
-                </li>
-              </ul>
-            </div>
-            <div class="layer__btns">
-              <a target="_blank" href="https://alexdj-omnifood.netlify.app/"
-                ><i class="bx bx-link-external"></i
-              ></a>
-              <a
-                target="_blank"
-                href="https://github.com/DjurovicAleksandar/omnifood-project"
-                ><i class="bx bxl-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <!------------------------ CONTACT SECTION--------------------------->
     <section class="contact section hidden" id="contact">
       <div class="contact__text">
-        <h2>Don't<span> hesitate!</span></h2>
-        <h4>Drop me a line if I can do anything for you.</h4>
+        <h2>
+          <span>Collaborate</span> with me
+          <span>to create impactful digital experiences.</span>
+        </h2>
+        <h4>Let's connect!</h4>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.7024305854293!2d18.35610071534773!3d43.820531379115955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c9c0f74f1841%3A0xea8536353e9704d1!2sVojvode%20Radomira%20Putnika%2036%2C%20Lukavica%2C%20Bosnia%20and%20Herzegovina!5e0!3m2!1sen!2sro!4v1675090273091!5m2!1sen!2sro"
           style="border: 0"
@@ -706,7 +728,7 @@
           ></textarea>
           <input
             type="submit"
-            class="main__btn submit btn"
+            class="main__btn submit btn message__btn"
             value="Send message"
           />
           <a
@@ -722,10 +744,7 @@
     <footer>
       <div class="footer__text">
         <p>Copyright © 2022 by Aleksandar Đurović All Rights Reserved.</p>
-        <p>
-          Website icons by
-          <a target="_blank" href="https://icons8.com/">Icon8</a>
-        </p>
+        <a href="#">Return to the top</a>
       </div>
     </footer>
   </body>

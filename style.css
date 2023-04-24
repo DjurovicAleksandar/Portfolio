@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 /**********************GENERAL STYLING***********************/
 * {
   padding: 0;
@@ -7,13 +7,21 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  border-radius: 10px;
+  font-weight: 300;
+  letter-spacing: 5px;
 }
 :root {
-  --bg-color: #eee1c6;
+  --bg-color: #000000;
+  --second-bg-color: #e8d6b3;
+  --text-color: #000000;
+  --second-color: #000000;
+  --main-color: #d78e07;
+  /* --bg-color: #eee1c6;
   --second-bg-color: #e8d6b3;
   --text-color: #382828;
   --second-color: #544242;
-  --main-color: #0c8962;
+  --main-color: #0c8962; */
 
   --big-font: 8rem;
   --h2-font: 4.8rem;
@@ -24,11 +32,17 @@
 html {
   font-size: 62.5%;
 }
+video {
+  max-width: 100%;
+}
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Bangers', cursive;
+  background-image: url(./img/bodyBG.jpg);
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 section {
@@ -52,7 +66,7 @@ nav {
   width: 100%;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 200;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,19 +84,22 @@ nav {
   font-weight: 700;
   letter-spacing: 0.1rem;
   transition: var(--transition);
-
   background: transparent;
   color: var(--main-color);
+  border-left: 1px solid black;
+  padding-left: 5px;
 }
 span {
   color: var(--main-color);
 }
 
 .logo__span {
+  border-left: 1px solid black;
   display: inline-block;
-  transform: translate(-1.2rem, 0.5rem);
+  transform: translate(-0.3rem, 0.5rem);
   background-color: var(--main-color);
   color: var(--bg-color);
+  padding-left: 5px;
 }
 
 /**********************NAV ITEMS STYLING***********************/
@@ -119,7 +136,7 @@ span {
 #menu__icon {
   font-size: 3.5rem;
   color: var(--text-color);
-  z-index: 3;
+  z-index: 300;
   cursor: pointer;
   margin-left: 2.5rem;
   display: none;
@@ -130,17 +147,19 @@ span {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url(./img/background1.jpg);
+  /* background-image: url(./img/background1.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   color: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   border-bottom: 0.5px solid var(--text-color);
 }
+
 .home__text {
   padding: 1rem;
+  z-index: 10;
 }
 .slide {
   margin: 0rem 0 0.1rem -0.2rem;
@@ -186,6 +205,7 @@ span {
   flex-direction: column;
   left: 75%;
   top: 35%;
+  z-index: 10;
 }
 
 .social__after {
@@ -197,6 +217,7 @@ span {
   width: 0.2rem;
   height: 13rem;
   background-color: var(--main-color);
+
   transition: var(--transition);
 }
 .social__after.position {
@@ -206,7 +227,7 @@ span {
 .home__socials i {
   height: 4rem;
   width: 4rem;
-  background: var(--main-color);
+  background-color: white;
   color: var(--text-color);
   font-size: 2rem;
   display: inline-flex;
@@ -214,6 +235,12 @@ span {
   justify-content: center;
   padding: 1rem 2rem;
   transition: var(--transition);
+  border: 1px solid transparent;
+}
+.home__socials i:hover {
+  background: transparent;
+  color: black;
+  border-color: black;
 }
 
 /**********************HEADING BUTTON STYLING***********************/
@@ -222,12 +249,15 @@ span {
   align-items: center;
   justify-content: space-between;
 }
+.buttons .btn--secondary:hover {
+  border-color: transparent;
+}
 
 .btn {
   display: inline-block;
   padding: 1.2rem 2.8rem;
   background: var(--main-color);
-  color: var(--text-color);
+  color: white;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   font-weight: 600;
@@ -242,17 +272,16 @@ span {
     var(--text-color) 50%
   );
   background-size: 230%;
-  border: 0.1rem solid var(--main-color);
 }
 .main__btn:hover {
   background-position: 100%;
-  color: var(--text-color);
+  color: white;
 }
 
 .btn:hover {
   transform: scale(0.9);
   background-color: var(--text-color);
-  color: var(--main-color);
+  color: white;
   border-color: var(--main-color);
 }
 
@@ -262,9 +291,14 @@ span {
 
 .btn--secondary {
   color: var(--bg-color);
+  color: black;
   background-color: transparent;
   border: 0.1rem solid var(--main-color);
   margin-left: 3.5rem;
+}
+
+.message__btn {
+  color: white;
 }
 
 /**********************************ABOUT SECTION STYLING*********************************************/
@@ -278,7 +312,7 @@ span {
 
 .about__img {
   width: 90%;
-  border: 0.3rem solid white;
+
   background: linear-gradient(
     370deg,
     transparent,
@@ -291,10 +325,9 @@ span {
 
 .about__img img {
   backdrop-filter: blur(0.4rem);
-  border: 0.3rem solid var(--text-color);
+  border: 0.1rem solid var(--text-color);
   max-width: 37rem;
   max-height: auto;
-
   transform: translate(2rem, -3rem);
 }
 
@@ -326,14 +359,14 @@ span {
   color: var(--text-color);
 }
 .about .btn--secondary:hover {
-  color: var(--main-color);
+  border-color: transparent;
+  color: white;
 }
-*/
 
 /**********************************SKILLS SECTION STYLING*********************************************/
 
 .skills {
-  background: var(--second-bg-color);
+  /* background: var(--second-bg-color); */
 }
 
 /**********************TEXT BOX STYLING***********************/
@@ -360,9 +393,18 @@ span {
 }
 
 .content__box {
-  background-color: var(--bg-color);
   transition: var(--transition);
   width: fit-content;
+  position: relative;
+}
+.mario {
+  /* transition: var(--transition); */
+  transition: all 250ms ease;
+  opacity: 0;
+  position: absolute;
+  width: 3rem;
+  bottom: -10rem;
+  right: 50%;
 }
 
 .content__box h3 {
@@ -383,7 +425,7 @@ span {
   line-height: 1.5;
   font-size: 1.2rem;
   width: fit-content;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .content__icon {
@@ -391,7 +433,7 @@ span {
   width: 10rem;
   height: 10rem;
 }
-/* 
+/*
 
 /*FACE*/
 .face {
@@ -400,23 +442,26 @@ span {
 }
 
 .face-one {
+  border-radius: 10px;
   position: relative;
-  background: var(--bg-color);
-  z-index: 1;
+  z-index: 100;
   transition: var(--transition);
   transform: translateY(10rem);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -1.2rem 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
+  box-shadow: -1.2rem 0.2rem 2.2rem rgba(0, 0, 0, 0.4);
 }
 .face-two {
   position: relative;
-  background: var(--bg-color);
-  transition: var(--transition);
+  opacity: 0;
+  transition: all 50ms ease;
   box-shadow: -1.2rem 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
   transform: translateY(-10rem);
   padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .face__title {
@@ -427,7 +472,7 @@ span {
   width: 100%;
   display: grid;
   column-gap: 6rem;
-  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(0.1rem, 1fr));
   align-items: center;
 }
 
@@ -435,26 +480,33 @@ span {
   width: 5rem;
 }
 
-.content__box:hover {
-  box-shadow: -1.2rem 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
+.content__box:hover .mario {
+  /* box-shadow: -1.2rem 0.2rem 1.2rem rgba(0, 0, 0, 0.4); */
+  opacity: 1;
+  bottom: -4.9rem;
+}
+.content__box:hover .mario__audioio {
+  /* box-shadow: -1.2rem 0.2rem 1.2rem rgba(0, 0, 0, 0.4); */
+  /* opacity: 1;
+  bottom: -4.9rem; */
 }
 
 .content__box:hover .face-one {
   transform: translateY(0);
   box-shadow: none;
-  background: var(--main-color);
+  /* background: var(--main-color); */
+  background: transparent;
 }
 .content__box:hover .face-two {
   transform: translateY(0);
+  opacity: 1;
   box-shadow: none;
 }
 
 /**********************************PORTOFLIO SECTION STYLING*********************************************/
 .portfolio__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  align-items: center;
-  gap: 4rem;
+  width: 100%;
+  columns: 2;
   margin-top: 9rem;
 }
 
@@ -462,6 +514,10 @@ span {
 .row {
   position: relative;
   overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+  transition: all 700ms easy-in-out;
 }
 
 .row img {
@@ -493,6 +549,8 @@ span {
 
 .layer__btns {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
   cursor: pointer;
 }
@@ -549,6 +607,9 @@ span {
   background-color: var(--text-color);
   color: var(--main-color);
 }
+.row:hover {
+  opacity: 1;
+}
 
 .row:hover img {
   transform: scale(1.5);
@@ -559,7 +620,7 @@ span {
 }
 /**********************************CONTACT SECTION STYLING*********************************************/
 .contact {
-  background: var(--second-bg-color);
+  /* background: var(--second-bg-color); */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: centers;
@@ -585,7 +646,6 @@ iframe {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
-  /* border-radius: 1rem; */
   box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.3);
 }
 
@@ -599,13 +659,19 @@ iframe {
 .contact__socials i {
   height: 4.5rem;
   width: 4.5rem;
-  background: var(--main-color);
-  color: var(--text-color);
+  background: transparent;
+  color: black;
   font-size: 2.2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  border: 1px solid transparent;
+}
+.contact__socials i:hover {
+  background: transparent;
+  color: black;
+  border-color: black;
 }
 
 /**********************FORM STYLING***********************/
@@ -618,7 +684,7 @@ form textarea {
   width: 100%;
   padding: 1.4rem;
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--main-color);
   border: none;
   font-size: 1.4rem;
   outline: none;
@@ -634,11 +700,13 @@ form textarea {
   font-size: 1.6rem;
   width: fit-content;
   background-color: var(--main-color);
+  color: white;
   transition: var(--transition);
 }
 .contact__form .submit:hover {
   cursor: pointer;
-  color: var(--main-color);
+  /* color: var(--main-color); */
+  color: white;
 }
 
 /**********************************FOOTER SECTION STYLING*********************************************/
@@ -648,8 +716,13 @@ footer {
   justify-content: center;
   align-content: center;
   gap: 3.2rem;
-  background-color: var(--bg-color);
+  color: black;
   text-align: center;
+}
+footer a {
+  border-radius: 50%;
+  display: block;
+  margin-top: 2rem;
 }
 
 .footer__text p {
@@ -722,6 +795,10 @@ footer {
   }
 }
 @media (max-width: 820px) {
+  .portfolio__content {
+    columns: 1;
+  }
+
   #menu__icon {
     display: block;
     margin-right: 0.5rem;
